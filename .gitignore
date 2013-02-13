@@ -1,4 +1,10 @@
 *.class
+# Eclipse config #
+.classpath
+.project
+.settings/
+# Maven target dir #
+target/
 
 # Package Files #
 *.jar

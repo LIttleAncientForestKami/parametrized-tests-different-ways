@@ -16,22 +16,25 @@ public class AdderTest {
 	private int first;
 	private int second;
 	private int result;
+	private String message;
+	private static final String OK = "Simple addition, should not be faulty.";
 	
 	@Parameters
 	public static Collection <Object[]> data() { 
-			Object[][] data = new Object[][] { {1,1,2}, {1,2,3}, {1,3,4}, {3,3,6}, {4,5,9},
-												{1,1,1} };
+			Object[][] data = new Object[][] { {1,1,2, OK}, {1,2,3, OK}, {1,3,4, OK}, {3,3,6, OK}, {4,5,9, OK},
+												{1,1,1, "bad result given on purpose"} };
 			return Arrays.asList(data);
     }
     
-	public AdderTest(int f, int s, int r) {
+	public AdderTest(int f, int s, int r, String msg) {
 		this.first = f;
 		this.second = s;
 		this.result = r;
+		this.message = msg;
 	}
 	
 	@Test
-	public void test() {
+	public void shouldAddAsExpected() {
 		//given 
 		Adder a = new Adder();
 		int expected = result;
@@ -40,7 +43,7 @@ public class AdderTest {
 		int actual = a.add(first, second);
 		
 		// then
-		assertEquals(expected, actual);
+		assertEquals(message, expected, actual);
 	}
 	
 }

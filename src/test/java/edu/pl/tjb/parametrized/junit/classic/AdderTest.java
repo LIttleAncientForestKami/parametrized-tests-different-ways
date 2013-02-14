@@ -19,7 +19,7 @@ public class AdderTest {
 	private String message;
 	private static final String OK = "Simple addition, should not be faulty.";
 	
-	@Parameters
+	@Parameters(name="Is {0}+{1} really {2}? Set # {index}")
 	public static Collection <Object[]> data() { 
 			Object[][] data = new Object[][] { {1,1,2, OK}, {1,2,3, OK}, {1,3,4, OK}, {3,3,6, OK}, {4,5,9, OK},
 												{1,1,1, "bad result given on purpose"} };

@@ -6,6 +6,13 @@
 # Maven target dir #
 target/
 
+# Idea config
+.idea/
+*.iml
+
+# Vim swap files
+*.sw?
+
 # Package Files #
 *.jar
 *.war

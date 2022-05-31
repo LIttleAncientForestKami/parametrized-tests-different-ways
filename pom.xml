@@ -5,15 +5,19 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>parametrized-tests-different-ways</name>
   <description>comparison of different ways to test with parameters</description>
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
+        <version>3.8.0</version>
         <configuration>
-          <source/>
-          <target/>
+            <source>17</source>
+            <target>17</target>
         </configuration>
       </plugin>
     </plugins>
@@ -22,7 +26,7 @@
 	<dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
-	    <version>4.11</version>
+	    <version>4.13.1</version>
 	    <scope>test</scope>
 	</dependency>
   </dependencies>
